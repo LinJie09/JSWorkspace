@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+    <script src="./dice.js"></script>
+</head>
+<body>
+    <p>請選擇骰子面數 :
+        <select name="dice" id="dices">
+            <option value="1">一面</option>
+            <option value="2">二面</option>
+            <option value="3">三面</option>
+            <option value="4">四面</option>
+            <option value="5">五面</option>
+            <option value="6">六面</option>
+        </select>
+    </p>
+    <p >請輸入骰子數量 :
+        <input id="count" type="text" size="2" value="0">
+    </p>
+    <p >請輸入要丟擲幾次 : 
+        <input id="times" type="text" size="2" value="1">
+    </p>
+    <button class="btn" onclick="func()">擲出</button>
+</body>
+</html>
