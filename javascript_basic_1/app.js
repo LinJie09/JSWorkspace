@@ -1,12 +1,18 @@
-const colors = ["green", "red", "rgba(133,122,200)", "#f15025"];
 
-const btn = document.getElementById('btn')
-const color = document.getElementById('color')
+window.onload = () => {
+    const colors = ["green", "red", "rgba(133,122,200)", "#f15025"];
 
-btn.addEventListener('click',function(){
-    const randomNumber = click()
-})
+    const btn = document.getElementById('btn')
 
-function click(){
-    const result = Math.floor(Math.random()*colors.length)
+    btn.addEventListener('click', function () {
+        const randomNumber = click()
+
+        document.body.style.backgroundColor = colors[randomNumber]
+        document.querySelector(".color").textContent = colors[randomNumber]
+
+    })
+
+    function click() {
+        return Math.floor(Math.random() * colors.length)
+    }
 }
