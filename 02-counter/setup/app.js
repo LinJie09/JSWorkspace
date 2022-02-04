@@ -8,15 +8,16 @@ window.onload = () => {
     inc.onclick = function () {
         count += 1
         document.querySelector('#value').textContent = count
-        document.getElementById('inc').style.color = 'green'
+        document.getElementById('value').style.color = 'green'
     }
     dec.onclick = function () {
         count -= 1
         document.querySelector('#value').textContent = count
-        document.getElementById('inc').style.color = 'red'
+        document.getElementById('value').style.color = 'red'
     }
     reset.onclick = function(){
         count = 0
         document.querySelector('#value').textContent = count
+        document.getElementById('value').style.color = '#222'
     }
 }
