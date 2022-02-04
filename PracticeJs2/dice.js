@@ -9,7 +9,7 @@ function func(){
     const result = document.getElementById('result')
     result.innerHTML="";
     const resultElement = document.createElement('resultElement')
-    const diceObj = {};
+
     for(let i=0;i<times;i++){
         let total = 0
         for(let j=0;j<dice;j++){
@@ -19,11 +19,7 @@ function func(){
             p.innerHTML=total
             result.appendChild(p)
         }
-        if(diceObj[total]){
-            diceObj[total] = diceObj[total]+1;
-        }else{
-            diceObj[total] = 1
-        }
+        
     }
 
     

@@ -1,14 +1,22 @@
 
 window.onload = () => {
-
     let count = 0
-    const btn = document.querySelectorAll('btn')
-    const value = document.querySelector('#value')
-    btn.forEach(function () {
-        btn.addEventListener('click',function(e){
-            const number = e
-            
-        })
-        
-    });
+    const inc = document.getElementById('inc')
+    const reset = document.getElementById('reset')
+    const dec = document.getElementById('dec')
+
+    inc.onclick = function () {
+        count += 1
+        document.querySelector('#value').textContent = count
+        document.getElementById('inc').style.color = 'green'
+    }
+    dec.onclick = function () {
+        count -= 1
+        document.querySelector('#value').textContent = count
+        document.getElementById('inc').style.color = 'red'
+    }
+    reset.onclick = function(){
+        count = 0
+        document.querySelector('#value').textContent = count
+    }
 }
