@@ -42,9 +42,9 @@ window.onload = () => {
   const author = document.getElementById('author')
   const job = document.getElementById('job')
   const info = document.getElementById('info')
+
   const pre_Btn = document.getElementById('prev')
   const next_Btn = document.getElementById('next')
-
   const random_Btn = document.querySelector('.random-btn')
 
   let current_State = 0
@@ -57,6 +57,7 @@ window.onload = () => {
 
   function show(person) {
     const item = reviews[person]
+    img.src = item.img
     author.textContent = item.name
     job.textContent = item.job
     info.textContent = item.text
