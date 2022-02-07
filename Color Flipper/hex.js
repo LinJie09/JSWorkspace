@@ -8,7 +8,7 @@ window.onload = () => {
 
     btn.addEventListener('click', function () {
         let randomWord = '#'
-        for(let i=0;i<6;i++){
+        for (let i = 0; i < 6; i++) {
             randomWord += hex[click()]
         }
 
