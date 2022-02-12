@@ -4,20 +4,25 @@ window.onload = () => {
     const inc = document.getElementById('inc')
     const reset = document.getElementById('reset')
     const dec = document.getElementById('dec')
+    const value = document.getElementById('value')
 
     inc.onclick = function () {
-        count += 1
+        count++
+        if (count > 0) {
+            value.style.color = 'green'
+        }
         document.querySelector('#value').textContent = count
-        document.getElementById('value').style.color = 'green'
     }
     dec.onclick = function () {
-        count -= 1
+        count--
+        if (count < 0) {
+            value.style.color = 'red'
+        }
         document.querySelector('#value').textContent = count
-        document.getElementById('value').style.color = 'red'
     }
-    reset.onclick = function(){
+    reset.onclick = function () {
         count = 0
         document.querySelector('#value').textContent = count
-        document.getElementById('value').style.color = '#222'
+        value.style.color = '#222'
     }
 }
